@@ -191,6 +191,7 @@
             <dd class="clear"></dd>
 
             <dt id="activities">Activities</dt>
+
             <dd>
                 Apr., 2021: Speaker at the <a target="_blank" href="https://bothe.in/cv/images/ai_webinar.jpeg">Webinar on Introduction to AI</a>, organized by Anuradha Engineering College, Chikhli on 16th April 2021, held online.
                 <br />
@@ -198,8 +199,8 @@
                 <br />                                
                 Jan., 2021: Panelist at <a target="_blank"  href="https://bothe.in/cv/images/french_course_webinar.jpeg">French Course Webinar</a>, organized jointly by Jargan Lakecity University (Dr. Rolli Khare) and Online Language Institute (Pankhuri Nangia) on 18th Jan 2021, held online.
 
-                <details>
-                    <summary id="phd2020">2020: Completed PhD in Germany, Defended Thesis, PhD Internship, Published and Presented Work</summary>
+                <details id="phd2020">
+                    <summary>2020: Completed PhD in Germany, Defended Thesis, PhD Internship, Published and Presented Work</summary>
                 Nov., 2020: <a target="_blank" href="https://www.inf.uni-hamburg.de/en/inst/ab/wtm/about/news/chandrakant-phd-defense.html">Successfully defended my PhD thesis</a> titled ``Conversational Language Learning for Human-Robot Interaction" on 18th Nov 2020 at the University of Hamburg, Hamburg, Germany.
                 <br />                
                 May., 2020: Our article EDA: Enriching Emotional Dialogue Acts using an Ensemble of Neural Annotators to be published in the Proceedings of LREC 2020, Marseille, France.
@@ -243,8 +244,8 @@
                 Mar., 2016: SECURE Workshop - Kick Start Meetup in Hertfordshire, England, UK.
                 </details>
         
-                <details>
-                    <summary id="master2015">2015: Completed Masters in France, Defended Thesis, Master Internship</summary>
+                <details id="master2015">
+                    <summary>2015: Completed Masters in France, Defended Thesis, Master Internship</summary>
                 Aug., 2015: Successfully defended my master thesis titled "Human-Humanoid Interaction by Verbal Dia-logues:  Nao humanoid robot with dialogue toolkit" on 26th August 2015 at the Ecole Centrale de Nantes, Nantes, France.
                 <br />                
                 Jun., 2015: Presented the published abstract <a target="_blank" href="http://jnrh2015.irccyn.ec-nantes.fr/documents/Livret_JNRH2015#page=14">Human-Humanoid Interaction by Verbal Dialogues</a> of master thesis in the conference <a target="_blank" href="http://jnrh2015.irccyn.ec-nantes.fr/">Journées Nationales de la Robotique Humanoïde</a> (JNRH 2015) held at the Ecole Centrale de Nantes with IRCCyN Lab., Nantes, France.
@@ -252,8 +253,8 @@
                 Sep., 2013: I joined the Ecole Centrale de Nantes, France to attend international Masters Program in Robotics, Informatics and Control Engineering for which I flew to Nantes, France, with the tickets provided by Erasmus Mundus, for the first time ever to see flight that closely.
                 </details>
 
-                <details>
-                    <summary id="teaching2013">2013: Joining First Job in Teaching, then Dropout from ME as Received Scholarship Offer</summary>
+                <details id="teaching2013">
+                    <summary>2013: Joining First Job in Teaching, then Dropout from ME as Received Scholarship Offer</summary>
                 Sep., 2013: Dropout Master of Engineering (Electronics: VLSI and Embedded Systems) after successful completion of three semesters at Sinhgad School of Engineering via University of Pune.
                 <br />                
                 May 2013: Received an official scholarship offer letter for Erasmus Mundus Action 2 India4EU II Call on 22 May 2013 and I accepted the offer on 25 May 2013 (by the way my birth-date, one of the most honorable gift ever), scholarship to attend Master program in Robotics in France.
@@ -271,8 +272,8 @@
                 Jul., 2011: Joined my first ever job position as a lecturer for one year in EnTC department at PLIT (Pankaj Ladhad Intstitute of Technology), Buldana, India.
                 </details>
 
-                <details>
-                    <summary id="bachelor2011">2011: Completing Bachelor, and First Robotics Projects</summary>
+                <details id="bachelor2011">
+                    <summary>2011: Completing Bachelor, and First Robotics Projects</summary>
                 Jun., 2011: Completed Bachelor of Engineering in Electronics and Tele-communication (EnTC) at Anuradha Engg. College, Chikhli with first grade along with an elective subject Robotics and Automation in 7th semester from Amravati University.
                 <br />                
                 Mar., 2011: Coordinated Hertz-2011 National Level Technical Festival held on 14 March 2011 at EnTC Department, Anuradha Engineering College, Chikhli, India.
@@ -294,8 +295,8 @@
                 Jul., 2007: Admission to Anuradha Engineering College, Chikhli for Bachelor of Engineering in Electronics and Tele-communication.
                 </details>
 
-                <details>
-                    <summary id="schooling2007">Until 2007: Schooling, First Computer Interaction, and Higher Schooling</summary>
+                <details id="schooling2007">
+                    <summary>Until 2007: Schooling, First Computer Interaction, and Higher Schooling</summary>
                     May 2007: Passed the Maharastra Common Entrance Test making eligible to apply for the admission in engineering colleges after completing crash course for exam in Yavatmal.
                     <br /> 
                     Feb., 2007: Completed my higher schooling from Zilha Parishad (Z.P. - District Council) Junior College of Science, Mangrulpir, District Washim (MS), all studies were in English for 11th and 12th standard and passed the Higher Secondary Certificate Examination with first grade. Subjects include Maths and Statistics, Physics, Chemistry, Biology and two languages: English and Marathi. 
@@ -427,6 +428,14 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 5000); // Change image every 2 seconds
 }
+
+function openTarget() {
+  var hash = location.hash.substring(1);
+  if(hash) var details = document.getElementById(hash);
+  if(details && details.tagName.toLowerCase() === 'details') details.open = true;
+}
+window.addEventListener('hashchange', openTarget);
+openTarget();
 </script>
 </body>
 
